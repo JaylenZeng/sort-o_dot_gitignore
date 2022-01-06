@@ -6,9 +6,11 @@ public class Sorts {
   public static void bubbleV(ArrayList<Comparable> data) {
     boolean sorted = true;
     int comparisons = 0;
-    for (int i = 0; i < data.size(); i++) {
-      for (int j = data.size() - 1; j > i; j--) {
+    for (int pass = 0; pass < data.size(); pass++) {
+      //iterate thru array from last to pass index
+      for (int j = data.size() - 1; j > pass; j--) {
         comparisons++;
+        //compare adjacent elements and swap if needed
         if (data.get(j).compareTo(data.get(j - 1)) < 0) {
           sorted = false;
           Comparable temp = data.get(j);
@@ -16,6 +18,8 @@ public class Sorts {
           data.set(j - 1, temp);
         }
       }
+      //end loop
+      //if no swaps are made, the array is already sorted
       if (sorted){
         break;
       }
