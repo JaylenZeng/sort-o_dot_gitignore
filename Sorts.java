@@ -1,21 +1,26 @@
 import java.util.ArrayList;
 
 public class Sorts {
+  // Void Methods:
 
   public static void bubbleV(ArrayList<Comparable> data) {
-    /* YOUR IMPLEMENTATION HERE */
+    boolean sorted = true;
     int comparisons = 0;
     for (int i = 0; i < data.size(); i++) {
       for (int j = data.size() - 1; j > i; j--) {
+        comparisons++;
         if (data.get(j).compareTo(data.get(j - 1)) < 0) {
-          comparisons++;
+          sorted = false;
           Comparable temp = data.get(j);
           data.set(j, data.get(j - 1));
           data.set(j - 1, temp);
         }
       }
+      if (sorted){
+        break;
+      }
     }
-    System.out.println("This took:" +comparisons+ "comparisons");
+    System.out.println("bubble sort took: " + comparisons + " comparisons");
   }
 
   public static void selectionV(ArrayList<Comparable> data) {
@@ -28,10 +33,10 @@ public class Sorts {
       maxPos = pass;
       // iterate thru next-to-last to first element and compare with last.
       for (int i = pass - 1; i >= 0; i--) {
+        comparisons++;
 
         // if element at i > element at maxPos, new maxPos = i
         if (data.get(i).compareTo(data.get(maxPos)) > 0) {
-          comparisons++;
           maxPos = i;
         }
 
@@ -42,9 +47,9 @@ public class Sorts {
       data.set(maxPos, temp);
 
     }
-    System.out.println("This took:" +comparisons+ "comparisons");
+    System.out.println("selection sort took: " + comparisons + " comparisons");
 
-  }// end selectionSort
+  }// end selectionV
 
   public static void insertionV(ArrayList<Comparable> data) {
     int comparisons = 0;
@@ -53,11 +58,11 @@ public class Sorts {
 
       // traverse sorted region from right to left
       for (int i = partition; i > 0; i--) {
+        comparisons++;
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
         if (data.get(i).compareTo(data.get(i - 1)) < 0) {
-          comparisons++;
           Comparable temp = data.get(i);
           data.set(i, data.get(i - 1));
           data.set(i - 1, temp);
@@ -65,56 +70,43 @@ public class Sorts {
           break;
       }
     }
-    System.out.println("This took:" +comparisons+ "comparisons");
+    System.out.println("insertion sort took: " + comparisons + " comparisons");
 
-  }// end insertionSortV
-  public static ArrayList<Comparable>
-  insertion( ArrayList<Comparable> input )
-{
-  //declare and initialize empty ArrayList for copying
-  ArrayList<Comparable> data = new ArrayList<Comparable>();
+  }// end insertionV
 
-  //copy input ArrayList into working ArrayList
-  for( Comparable o : input )
-    data.add( o );
+  // Non void methods:
 
-  //sort working ArrayList
-  insertion( data );
+  public static ArrayList<Comparable> insertion(ArrayList<Comparable> input) {
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
 
-  //return working ArrayList
-  return data;
-}//end insertionSort
-public static ArrayList<Comparable>
-  insertionSort( ArrayList<Comparable> input )
-{
-  //declare and initialize empty ArrayList for copying
-  ArrayList<Comparable> data = new ArrayList<Comparable>();
+    for (Comparable o : input)
+      data.add(o);
 
-  //copy input ArrayList into working ArrayList
-  for( Comparable o : input )
-    data.add( o );
+    insertionV(data);
 
-  //sort working ArrayList
-  insertionSortV( data );
+    return data;
+  }
 
-  //return working ArrayList
-  return data;
-}//end insertionSort
-public static ArrayList<Comparable>
-  insertionSort( ArrayList<Comparable> input )
-{
-  //declare and initialize empty ArrayList for copying
-  ArrayList<Comparable> data = new ArrayList<Comparable>();
+  public static ArrayList<Comparable> bubble(ArrayList<Comparable> input) {
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
 
-  //copy input ArrayList into working ArrayList
-  for( Comparable o : input )
-    data.add( o );
+    for (Comparable o : input)
+      data.add(o);
 
-  //sort working ArrayList
-  insertionSortV( data );
+    bubbleV(data);
 
-  //return working ArrayList
-  return data;
-}//end insertionSort
+    return data;
+  }
+
+  public static ArrayList<Comparable> selection(ArrayList<Comparable> input) {
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
+
+    for (Comparable o : input)
+      data.add(o);
+
+    selectionV(data);
+
+    return data;
+  }
 
 }
