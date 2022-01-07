@@ -1,3 +1,10 @@
+// dot_gitignore : David Chen, Jaylen Zeng, Yat Long Chan
+// APCS pd7
+// L04: Never Fear, Big O is Here!
+// 2022-01-07
+// time spent:  0.1 hrs
+
+
 import java.util.ArrayList;
 
 public class Sorts {
@@ -49,7 +56,7 @@ public class Sorts {
       data.set(maxPos, temp);
     }
     System.out.println("selection sort took: " + comparisons + " comparisons to complete");
-
+    DISCO
   }// end selectionV
 
   public static void insertionV(ArrayList<Comparable> data) {
