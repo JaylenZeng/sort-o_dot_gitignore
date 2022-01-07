@@ -1,4 +1,5 @@
 # sort-o_dotgitignore
+David Chen, Yatlong Chan, Jaylen Zeng
 
 ## Bubble Sort
 * The best case would be when the array is already sorted.
