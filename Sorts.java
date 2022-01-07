@@ -24,7 +24,7 @@ public class Sorts {
         break;
       }
     }
-    System.out.println("bubble sort took: " + comparisons + " comparisons");
+    System.out.println("bubble sort took: " + comparisons + " comparisons to complete");
   }
 
   public static void selectionV(ArrayList<Comparable> data) {
@@ -48,7 +48,7 @@ public class Sorts {
       data.set(pass, data.get(maxPos));
       data.set(maxPos, temp);
     }
-    System.out.println("selection sort took: " + comparisons + " comparisons");
+    System.out.println("selection sort took: " + comparisons + " comparisons to complete");
 
   }// end selectionV
 
@@ -68,14 +68,13 @@ public class Sorts {
       //   } else
       //     break;
       // }
-
       for (int i = partition; i > 0 && data.get(i).compareTo(data.get(i - 1)) < 0; i--, comparisons++) {
         Comparable temp = data.get(i);
         data.set(i, data.get(i - 1));
         data.set(i - 1, temp);
       }
     }
-    System.out.println("insertion sort took: " + comparisons + " comparisons");
+    System.out.println("insertion sort took: " + comparisons + " comparisons to complete");
   }// end insertionV
 
   // Non void methods:
