@@ -7,10 +7,10 @@ public class Sorts {
     boolean sorted = true;
     int comparisons = 0;
     for (int pass = 0; pass < data.size(); pass++) {
-      //iterate thru array from last to pass index
+      // iterate thru array from last to pass index
       for (int j = data.size() - 1; j > pass; j--) {
         comparisons++;
-        //compare adjacent elements and swap if needed
+        // compare adjacent elements and swap if needed
         if (data.get(j).compareTo(data.get(j - 1)) < 0) {
           sorted = false;
           Comparable temp = data.get(j);
@@ -18,9 +18,9 @@ public class Sorts {
           data.set(j - 1, temp);
         }
       }
-      //end loop
-      //if no swaps are made, the array is already sorted
-      if (sorted){
+      // end loop
+      // if no swaps are made, the array is already sorted
+      if (sorted) {
         break;
       }
     }
@@ -38,18 +38,15 @@ public class Sorts {
       // iterate thru next-to-last to first element and compare with last.
       for (int i = pass - 1; i >= 0; i--) {
         comparisons++;
-
         // if element at i > element at maxPos, new maxPos = i
         if (data.get(i).compareTo(data.get(maxPos)) > 0) {
           maxPos = i;
         }
-
       }
       // swap last element with element at maxPos.
       Comparable temp = data.get(pass);
       data.set(pass, data.get(maxPos));
       data.set(maxPos, temp);
-
     }
     System.out.println("selection sort took: " + comparisons + " comparisons");
 
@@ -59,27 +56,29 @@ public class Sorts {
     int comparisons = 0;
     for (int partition = 1; partition < data.size(); partition++) {
       // partition marks first item in unsorted region
-
       // traverse sorted region from right to left
-      for (int i = partition; i > 0; i--) {
-        comparisons++;
+      // for (int i = partition; i > 0; i--) {
+      //   comparisons++;
+      //   // "walk" the current item to where it belongs
+      //   // by swapping adjacent items
+      //   if (data.get(i).compareTo(data.get(i - 1)) < 0) {
+      //     Comparable temp = data.get(i);
+      //     data.set(i, data.get(i - 1));
+      //     data.set(i - 1, temp);
+      //   } else
+      //     break;
+      // }
 
-        // "walk" the current item to where it belongs
-        // by swapping adjacent items
-        if (data.get(i).compareTo(data.get(i - 1)) < 0) {
-          Comparable temp = data.get(i);
-          data.set(i, data.get(i - 1));
-          data.set(i - 1, temp);
-        } else
-          break;
+      for (int i = partition; i > 0 && data.get(i).compareTo(data.get(i - 1)) < 0; i--, comparisons++) {
+        Comparable temp = data.get(i);
+        data.set(i, data.get(i - 1));
+        data.set(i - 1, temp);
       }
     }
     System.out.println("insertion sort took: " + comparisons + " comparisons");
-
   }// end insertionV
 
   // Non void methods:
-
   public static ArrayList<Comparable> insertion(ArrayList<Comparable> input) {
     ArrayList<Comparable> data = new ArrayList<Comparable>();
 
