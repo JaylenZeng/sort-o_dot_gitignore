@@ -3,6 +3,7 @@ David Chen, Yatlong Chan, Jaylen Zeng
 
 ## Bubble Sort
 * The best case would be when the array is already sorted.
+
 * Worst case would be if array was in descending order or the opposite of how you want it to be sorted.
 
 ## Selection Sort

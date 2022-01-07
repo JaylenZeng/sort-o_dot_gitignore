@@ -11,7 +11,12 @@ QCC
 
 
 BUB-QA
-
+q0: If a pass requires no swaps, what do you know?
+a0: That the list is sorted
+q1: After pass p, what do you know?
+a1: We know that the first p elements are sorted and in the right place
+q2: How many passes are necessary to completely sort?
+a2: The length of the array - 1 for the worst case (elements were in descending order)
 
 SEL-QA
 
