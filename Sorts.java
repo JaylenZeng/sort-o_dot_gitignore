@@ -13,9 +13,7 @@ public class Sorts {
   public static void bubbleV(ArrayList<Comparable> data) {
     boolean sorted = true;
     int comparisons = 0; // amount of comparisons
-    int passes = 0; // amount of passes
     for (int pass = 0; pass < data.size(); pass++) {
-      passes ++;
       // iterate thru array from last to pass index
       for (int j = data.size() - 1; j > pass; j--) {
         comparisons++;
@@ -34,7 +32,6 @@ public class Sorts {
       }
     }
     System.out.println("bubble sort took: " + comparisons + " comparisons to complete");
-    System.out.println("bubble sort took: " + passes + " passes to complete\n");
 
   }
 
@@ -43,10 +40,8 @@ public class Sorts {
     // maxPos will point to position of SELECTION (greatest value)
     int maxPos;
     int comparisons = 0; // amount of comparisons
-    int passes = 0; // amount of passes
 
     for (int pass = data.size() - 1; pass > 0; pass--) {
-      passes ++;
       maxPos = pass;
       // iterate thru next-to-last to first element and compare with last.
       for (int i = pass - 1; i >= 0; i--) {
@@ -62,15 +57,12 @@ public class Sorts {
       data.set(maxPos, temp);
     }
     System.out.println("selection sort took: " + comparisons + " comparisons to complete");
-    System.out.println("selection sort took: " + passes + " passes to complete\n");
 
   }// end selectionV
 
   public static void insertionV(ArrayList<Comparable> data) {
     int comparisons = 0; // amount of comparisons
-    int passes = 0; // amount of passes
     for (int partition = 1; partition < data.size(); partition++) {
-      passes ++;
       // partition marks first item in unsorted region
       // traverse sorted region from right to left
       for (int i = partition; i > 0; i--) {
@@ -86,7 +78,6 @@ public class Sorts {
       }
     }
     System.out.println("insertion sort took: " + comparisons + " comparisons to complete");
-    System.out.println("insertion sort took: " + passes + " passes to complete\n");
 
   }// end insertionV
 
