@@ -56,7 +56,6 @@ public class Sorts {
       data.set(maxPos, temp);
     }
     System.out.println("selection sort took: " + comparisons + " comparisons to complete");
-    DISCO
   }// end selectionV
 
   public static void insertionV(ArrayList<Comparable> data) {
@@ -64,21 +63,16 @@ public class Sorts {
     for (int partition = 1; partition < data.size(); partition++) {
       // partition marks first item in unsorted region
       // traverse sorted region from right to left
-      // for (int i = partition; i > 0; i--) {
-      //   comparisons++;
-      //   // "walk" the current item to where it belongs
-      //   // by swapping adjacent items
-      //   if (data.get(i).compareTo(data.get(i - 1)) < 0) {
-      //     Comparable temp = data.get(i);
-      //     data.set(i, data.get(i - 1));
-      //     data.set(i - 1, temp);
-      //   } else
-      //     break;
-      // }
-      for (int i = partition; i > 0 && data.get(i).compareTo(data.get(i - 1)) < 0; i--, comparisons++) {
-        Comparable temp = data.get(i);
-        data.set(i, data.get(i - 1));
-        data.set(i - 1, temp);
+      for (int i = partition; i > 0; i--) {
+        comparisons++;
+        // "walk" the current item to where it belongs
+        // by swapping adjacent items
+        if (data.get(i).compareTo(data.get(i - 1)) < 0) {
+          Comparable temp = data.get(i);
+          data.set(i, data.get(i - 1));
+          data.set(i - 1, temp);
+        } else
+          break;
       }
     }
     System.out.println("insertion sort took: " + comparisons + " comparisons to complete");

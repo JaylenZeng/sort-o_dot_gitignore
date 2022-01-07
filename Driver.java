@@ -25,14 +25,40 @@ public class Driver {
         worst.add(3);
         worst.add(1);
 
+        ArrayList<Comparable> yatlongChan = populate(1000, true);
+
+
         System.out.println("=====Best Case Tests=====");
-        System.out.println(Sorts.bubble(best));
-        System.out.println(Sorts.selection(best));
-        System.out.println(Sorts.insertion(best));
+        Sorts.bubble(best);
+        Sorts.selection(best);
+        Sorts.insertion(best);
+        Sorts.bubble(yatlongChan);
+        Sorts.selection(yatlongChan);
+        Sorts.insertion(yatlongChan);
+        
+        yatlongChan = populate(1000, false);
         System.out.println("\n=====Worst Case Tests=====");
-        System.out.println(Sorts.bubble(worst));
-        System.out.println(Sorts.selection(worst));
-        System.out.println(Sorts.insertion(worst));
+        Sorts.bubble(worst);
+        Sorts.selection(worst);
+        Sorts.insertion(worst);
+        Sorts.bubble(yatlongChan);
+        Sorts.selection(yatlongChan);
+        Sorts.insertion(yatlongChan);
     
+    }
+
+    public static ArrayList<Comparable> populate(int length, boolean ascending) {
+        ArrayList<Comparable> input = new ArrayList<Comparable>();
+        if(ascending) {
+            for(int i = 0; i < length; i++) {
+                input.add(i);
+            }
+        } else {
+            for (int i = length - 1; i >= 0; i--) {
+                input.add(i);
+            }
+        }
+
+        return input;
     }
 }
