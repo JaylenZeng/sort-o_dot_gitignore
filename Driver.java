@@ -4,56 +4,43 @@
 // 2022-01-07
 // time spent:  0.1 hrs
 
-
 import java.util.ArrayList;
 
 public class Driver {
     public static void main(String[] args) {
-        // best case ArrayList. Already Sorted
-        ArrayList<Comparable> best = new ArrayList<Comparable>();
-        best.add(1);
-        best.add(3);
-        best.add(5);
-        best.add(7);
-        best.add(12);
-
-        // worst case ArrayList. Descending/reverse order.
-        ArrayList<Comparable> worst = new ArrayList<Comparable>();
-        worst.add(12);
-        worst.add(7);
-        worst.add(5);
-        worst.add(3);
-        worst.add(1);
-
-        ArrayList<Comparable> yatlongChan = populate(1000, true);
-
+        // ArrayList for testing
+        ArrayList<Comparable> test;
 
         System.out.println("=====Best Case Tests=====");
-        Sorts.bubble(best);
-        Sorts.selection(best);
-        Sorts.insertion(best);
-        Sorts.bubble(yatlongChan);
-        Sorts.selection(yatlongChan);
-        Sorts.insertion(yatlongChan);
-        
-        yatlongChan = populate(1000, false);
+        for (int i = 10; i <= 10000; i *= 10) {
+            test = populate(i, true);
+            System.out.println("\nTest With ArrayList of size: " + test.size());
+            Sorts.bubble(test);
+            Sorts.selection(test);
+            Sorts.insertion(test);
+        }
+
         System.out.println("\n=====Worst Case Tests=====");
-        Sorts.bubble(worst);
-        Sorts.selection(worst);
-        Sorts.insertion(worst);
-        Sorts.bubble(yatlongChan);
-        Sorts.selection(yatlongChan);
-        Sorts.insertion(yatlongChan);
-    
+        for (int i = 10; i <= 10000; i *= 10) {
+            test = populate(i, false);
+            System.out.println("\nTest With ArrayList of size: " + test.size());
+            Sorts.bubble(test);
+            Sorts.selection(test);
+            Sorts.insertion(test);
+        }
+
     }
 
+    // create and populate arrayList
     public static ArrayList<Comparable> populate(int length, boolean ascending) {
         ArrayList<Comparable> input = new ArrayList<Comparable>();
-        if(ascending) {
-            for(int i = 0; i < length; i++) {
+        if (ascending) {
+            // ascending order
+            for (int i = 0; i < length; i++) {
                 input.add(i);
             }
         } else {
+            // descending order
             for (int i = length - 1; i >= 0; i--) {
                 input.add(i);
             }

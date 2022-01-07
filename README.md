@@ -1,16 +1,26 @@
-# sort-o_dotgitignore
-David Chen, Yatlong Chan, Jaylen Zeng
+# sort-o_dot_gitignore
+David Chen, Yat Long Chan, Jaylen Zeng
 
 ## Bubble Sort
-* The best case would be when the array is already sorted.
+* The best case would be when the array is already sorted. This is because if the array is already sorted, there will only be n-1 comparisons and no swaps are made. The algo will then terminate after the first pass since no swaps are made. 
 
 * Worst case would be if array was in descending order or the opposite of how you want it to be sorted.
+
+Best Case Time Complexity: O(n)
+Worst Case Time Complexity: O(n^2)
 
 ## Selection Sort
-* Best case would be if the array is already sorted.
-* Worst case would be if array was in descending order or the opposite of how you want it to be sorted.
+* There is no best nor worst case as selection sort will always have to iterate fully and find the most extreme value for each pass regardless of the order of the array.
+
+Best Case Time Complexity: O(n^2)
+Worst Case Time Complexity: O(n^2)
+
 
 ## Insertion Sort
-* Best case would be if the array is already sorted.
+* Best case would be if the array is already sorted. If the array is already sorted, the algorithm only needs to make n-1 comparisons as all comparisons are done adjacently. The algo will terminate after n-1 passes. 
+
 * Worst case would be when the elements are ordered the exact opposite of how you want it to be sorted.
 
+
+Best Case Time Complexity: O(n)
+Worst Case Time Complexity: O(n^2)
