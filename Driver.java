@@ -44,8 +44,7 @@ public class Driver {
     public static ArrayList<Comparable> populateRandom(int length) {
         ArrayList<Comparable> array = new ArrayList<Comparable>();
         for (int i = 0; i < length; i ++) {
-            int randInt = (int) (Math.random() * length);
-            array.add(randInt);
+            array.add( (int) (Math.random() * length) ); // rand num on interval [0, length)
         } 
         return array;
     }
