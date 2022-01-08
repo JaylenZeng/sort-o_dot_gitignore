@@ -1,6 +1,8 @@
 # sort-o_dot_gitignore
 David Chen, Yat Long Chan, Jaylen Zeng
 
+## SotW: Shivers by Ed Sheeran
+
 ## Bubble Sort
 * The best case would be when the array is already sorted. This is because if the array is already sorted, there will only be n-1 comparisons and no swaps are made. The algo will then terminate after the first pass since no swaps are made. 
 
