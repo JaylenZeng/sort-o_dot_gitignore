@@ -43,12 +43,13 @@ public class Driver {
     // create ArrayList with random numbers
     public static ArrayList<Comparable> populateRandom(int length) {
         ArrayList<Comparable> array = new ArrayList<Comparable>();
-        for (int i = 0; i < length; i ++) {
-            array.add( (int) (Math.random() * length) ); // rand num on interval [0, length)
-        } 
+        for (int i = 0; i < length; i++) {
+            array.add((int) (Math.random() * length)); // rand num on interval [0, length)
+        }
         return array;
     }
-    // create ordered ArrayList 
+
+    // create ordered ArrayList
     public static ArrayList<Comparable> populateOrder(int length, boolean ascending) {
         ArrayList<Comparable> array = new ArrayList<Comparable>();
         if (ascending) {
@@ -62,7 +63,6 @@ public class Driver {
                 array.add(i);
             }
         }
-
         return array;
     }
 }
