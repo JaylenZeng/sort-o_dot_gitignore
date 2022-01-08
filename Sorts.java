@@ -4,7 +4,6 @@
 // 2022-01-07
 // time spent:  0.1 hrs
 
-
 import java.util.ArrayList;
 
 public class Sorts {
@@ -85,8 +84,9 @@ public class Sorts {
   public static ArrayList<Comparable> insertion(ArrayList<Comparable> input) {
     ArrayList<Comparable> data = new ArrayList<Comparable>();
 
-    for (Comparable o : input)
+    for (Comparable o : input) {
       data.add(o);
+    }
 
     insertionV(data);
 
@@ -96,8 +96,9 @@ public class Sorts {
   public static ArrayList<Comparable> bubble(ArrayList<Comparable> input) {
     ArrayList<Comparable> data = new ArrayList<Comparable>();
 
-    for (Comparable o : input)
+    for (Comparable o : input) {
       data.add(o);
+    }
 
     bubbleV(data);
 
@@ -107,8 +108,9 @@ public class Sorts {
   public static ArrayList<Comparable> selection(ArrayList<Comparable> input) {
     ArrayList<Comparable> data = new ArrayList<Comparable>();
 
-    for (Comparable o : input)
+    for (Comparable o : input) {
       data.add(o);
+    }
 
     selectionV(data);
 
