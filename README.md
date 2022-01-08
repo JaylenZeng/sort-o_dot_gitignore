@@ -2,6 +2,7 @@
 David Chen, Yat Long Chan, Jaylen Zeng
 
 **SotW: Shivers by Ed Sheeran**
+<iframe src="https://open.spotify.com/embed/track/6bQfNiqyCX7UaQSvVVGo4I?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 ## Bubble Sort
 * The best case would be when the array is already sorted. This is because if the array is already sorted, there will only be n-1 comparisons and no swaps are made. The algo will then terminate after the first pass since no swaps are made. 
