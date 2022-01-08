@@ -13,7 +13,7 @@ public class Driver {
 
         System.out.println("=====Best Case Tests=====");
         for (int i = 10; i <= 10000; i *= 10) {
-            test = populate(i, true);
+            test = populateOrder(i, true);
             System.out.println("\nTest With ArrayList of size: " + test.size());
             Sorts.bubble(test);
             Sorts.selection(test);
@@ -22,7 +22,16 @@ public class Driver {
 
         System.out.println("\n=====Worst Case Tests=====");
         for (int i = 10; i <= 10000; i *= 10) {
-            test = populate(i, false);
+            test = populateOrder(i, false);
+            System.out.println("\nTest With ArrayList of size: " + test.size());
+            Sorts.bubble(test);
+            Sorts.selection(test);
+            Sorts.insertion(test);
+        }
+
+        System.out.println("\n=====Average Case Tests=====");
+        for (int i = 10; i <= 10000; i *= 10) {
+            test = populateRandom(i);
             System.out.println("\nTest With ArrayList of size: " + test.size());
             Sorts.bubble(test);
             Sorts.selection(test);
@@ -31,21 +40,30 @@ public class Driver {
 
     }
 
-    // create and populate arrayList
-    public static ArrayList<Comparable> populate(int length, boolean ascending) {
-        ArrayList<Comparable> input = new ArrayList<Comparable>();
+    // create ArrayList with random numbers
+    public static ArrayList<Comparable> populateRandom(int length) {
+        ArrayList<Comparable> array = new ArrayList<Comparable>();
+        for (int i = 0; i < length; i ++) {
+            int randInt = (int) (Math.random() * length);
+            array.add(randInt);
+        } 
+        return array;
+    }
+    // create ordered ArrayList 
+    public static ArrayList<Comparable> populateOrder(int length, boolean ascending) {
+        ArrayList<Comparable> array = new ArrayList<Comparable>();
         if (ascending) {
             // ascending order
             for (int i = 0; i < length; i++) {
-                input.add(i);
+                array.add(i);
             }
         } else {
             // descending order
             for (int i = length - 1; i >= 0; i--) {
-                input.add(i);
+                array.add(i);
             }
         }
 
-        return input;
+        return array;
     }
 }

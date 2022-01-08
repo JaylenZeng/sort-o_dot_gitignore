@@ -4,9 +4,10 @@ L04: Never Fear, Big O is Here!
 2022-01-07
 
 DISCO 
-f(n) for best case = n-1 which we can write in big O notation as O(n).
-f(n) for worst case = (n^2-n)/2 which we can write in big O notation as O(n^2).
-
+remove all constants to put a fxn into big O notation
+f(n) for bubble/insertion sort best case = n-1 which we can write in big O notation as O(n).
+f(n) for bubble/insertion worst case = (n^2-n)/2 which we can write in big O notation as O(n^2).
+Insertion sort has a slightly faster average case than the others 
 QCC
 
 
