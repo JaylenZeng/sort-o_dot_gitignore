@@ -4,6 +4,7 @@ David Chen, Yat Long Chan, Jaylen Zeng
 **SotW:**
 * **[Shivers](https://open.spotify.com/track/6bQfNiqyCX7UaQSvVVGo4I?si=468fc2d442674c54) by Ed Sheeran**
 * **[The Bard's Song](https://open.spotify.com/track/7xPGvZaG9W7UOrCgEwbONe?si=555898783a42482c) by Blind Guardian**
+* **[Sunkissed](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Khai Dreams**
 
 ## Bubble Sort
 
