@@ -34,11 +34,11 @@ Worst Case Time Complexity: O(n^2)
 
 - Best case would be if the array is already sorted. If the array is already sorted, the algorithm only needs to make n-1 comparisons because all comparisons are done on adjacent elements. The algo will terminate after n-1 passes.
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/623253110285926443/929842373133996102/unknown.png" />
+  <img src="https://cdn.discordapp.com/attachments/927762048266412093/929844944649199716/unknown.png" />
 </p>
 - Worst case would be when the elements are ordered the exact opposite of how you want it to be sorted. The algo will have to compare each element with all the other elements, meaning (n^2-n)/2 comparisons are made.
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/623253110285926443/929843271398723594/unknown.png" />
+  <img src="https://cdn.discordapp.com/attachments/927762048266412093/929844249648836628/unknown.png" />
 </p>
 Best Case Time Complexity: O(n)
 
