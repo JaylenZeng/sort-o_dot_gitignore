@@ -38,7 +38,7 @@ Worst Case Time Complexity: O(n^2)
 </p>
 - Worst case would be when the elements are ordered the exact opposite of how you want it to be sorted. The algo will have to compare each element with all the other elements, meaning (n^2-n)/2 comparisons are made.
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/623253110285926443/929842322059984927/unknown.png" />
+  <img src="https://cdn.discordapp.com/attachments/623253110285926443/929843271398723594/unknown.png" />
 </p>
 Best Case Time Complexity: O(n)
 
