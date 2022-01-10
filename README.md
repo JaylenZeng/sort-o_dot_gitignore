@@ -20,7 +20,7 @@ Worst Case Time Complexity: O(n^2)
 
 ## Selection Sort
 
-- There is no best or worst case as selection sort will always have to compare each element with all the others, making (n^2-n) / 2 comparisons in total.
+- There is no best or worst case as selection sort will always have to compare each element with all the others, which again can be represented as an arithmetic sequence of (n-1) + (n-2) + ... + 1 or the other way around. The algo makes (n^2-n) / 2 comparisons in total.
 <img src="https://cdn.discordapp.com/attachments/623253110285926443/929814557810122772/unknown.png" />
   Best Case Time Complexity: O(n^2)
 
