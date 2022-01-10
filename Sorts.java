@@ -11,7 +11,9 @@ public class Sorts {
 
   public static void bubbleV(ArrayList<Comparable> data) {
     boolean sorted = true;
-    int comparisons = 0; // amount of comparisons
+    int comparisons = 0; // amount of comparisons]
+    int swaps = 0;
+    int ctr = 0;
     for (int pass = 0; pass < data.size(); pass++) {
       // iterate thru array from last to pass index
       for (int j = data.size() - 1; j > pass; j--) {
@@ -22,8 +24,10 @@ public class Sorts {
           Comparable temp = data.get(j);
           data.set(j, data.get(j - 1));
           data.set(j - 1, temp);
+          swaps++;
         }
       }
+      ctr++;
       // end loop
       // if no swaps are made, the array is already sorted
       if (sorted) {
@@ -31,7 +35,8 @@ public class Sorts {
       }
     }
     System.out.println("bubble sort took: " + comparisons + " comparisons to complete");
-
+    System.out.println("bubble sort took: " + ctr + " passes to complete");
+    System.out.println("bubble sort took: " + swaps + " swaps to complete");
   }
 
   public static void selectionV(ArrayList<Comparable> data) {
@@ -39,7 +44,8 @@ public class Sorts {
     // maxPos will point to position of SELECTION (greatest value)
     int maxPos;
     int comparisons = 0; // amount of comparisons
-
+    int ctr = 0;
+    int swaps = 0;
     for (int pass = data.size() - 1; pass > 0; pass--) {
       maxPos = pass;
       // iterate thru next-to-last to first element and compare with last.
@@ -50,17 +56,23 @@ public class Sorts {
           maxPos = i;
         }
       }
+      ctr++;
       // swap last element with element at maxPos.
       Comparable temp = data.get(pass);
       data.set(pass, data.get(maxPos));
       data.set(maxPos, temp);
+      swaps++;
     }
     System.out.println("selection sort took: " + comparisons + " comparisons to complete");
+    System.out.println("selection sort took: " + ctr + " passes to complete");
+    System.out.println("selection sort took: " + swaps + " swaps to complete");
 
   }// end selectionV
 
   public static void insertionV(ArrayList<Comparable> data) {
     int comparisons = 0; // amount of comparisons
+    int ctr = 1;
+    int swaps = 0;
     for (int partition = 1; partition < data.size(); partition++) {
       // partition marks first item in unsorted region
       // traverse sorted region from right to left
@@ -72,11 +84,15 @@ public class Sorts {
           Comparable temp = data.get(i);
           data.set(i, data.get(i - 1));
           data.set(i - 1, temp);
+          swaps++;
         } else
           break;
       }
+      ctr++;
     }
     System.out.println("insertion sort took: " + comparisons + " comparisons to complete");
+    System.out.println("insertion sort took: " + ctr + " passes to complete");
+    System.out.println("insertion sort took: " + swaps + " swaps to complete");
 
   }// end insertionV
 
