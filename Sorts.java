@@ -36,7 +36,7 @@ public class Sorts {
     }
     System.out.println("bubble sort took: " + comparisons + " comparisons to complete");
     System.out.println("bubble sort took: " + ctr + " passes to complete");
-    System.out.println("bubble sort took: " + swaps + " swaps to complete");
+    System.out.println("bubble sort took: " + swaps + " swaps to complete \n");
   }
 
   public static void selectionV(ArrayList<Comparable> data) {
@@ -65,8 +65,7 @@ public class Sorts {
     }
     System.out.println("selection sort took: " + comparisons + " comparisons to complete");
     System.out.println("selection sort took: " + ctr + " passes to complete");
-    System.out.println("selection sort took: " + swaps + " swaps to complete");
-
+    System.out.println("selection sort took: " + swaps + " swaps to complete \n");
   }// end selectionV
 
   public static void insertionV(ArrayList<Comparable> data) {
@@ -92,7 +91,7 @@ public class Sorts {
     }
     System.out.println("insertion sort took: " + comparisons + " comparisons to complete");
     System.out.println("insertion sort took: " + ctr + " passes to complete");
-    System.out.println("insertion sort took: " + swaps + " swaps to complete");
+    System.out.println("insertion sort took: " + swaps + " swaps to complete \n");
 
   }// end insertionV
 
