@@ -3,12 +3,15 @@ APCS pd7
 L04: Never Fear, Big O is Here!
 2022-01-07
 
-DISCO 
-remove all constants to put a fxn into big O notation
-f(n) for bubble/insertion sort best case = n-1 which we can write in big O notation as O(n).
-f(n) for bubble/insertion worst case = (n^2-n)/2 which we can write in big O notation as O(n^2).
-Insertion sort has a slightly faster average case than the others 
+DISCO
+- remove all constants to put a fxn into big O notation
+- f(n) for bubble/insertion sort best case = n-1 which we can write in big O notation as O(n).
+- f(n) for bubble/insertion worst case = (n^2-n)/2 which we can write in big O notation as O(n^2).
+- Insertion sort has a slightly faster average case than the others
 QCC
+- Are there any more efficient sorting algorithms?
+- How do we use each algorithm?
+- 
 
 
 BUB-QA
@@ -27,7 +30,7 @@ a1: p elements are correctly sorted
 q2: How do you know if sorted?
 a2: When n-1 passes are completed
 q3: What does a pass boil down to?
-a3: swapping most extreme element in array with end index. 
+a3: swapping most extreme element in array with end index.
 
 INS-QA
 q0: How many passes to sort n elements?
