@@ -8,7 +8,7 @@ David Chen, Yat Long Chan, Jaylen Zeng
 - **[The Bard's Song](https://open.spotify.com/track/7xPGvZaG9W7UOrCgEwbONe?si=555898783a42482c) by Blind Guardian**
 - **[Sunkissed](https://www.youtube.com/watch?v=dQw4w9WgXcQ) by Khai Dreams**
 
-## Bubble Sort
+## Exit-Early Bubble Sort
 
 - The best case would be when the array is already sorted. This is because if the array is already sorted, there will only be n-1 comparisons and no swaps are made. The algo will then terminate after the first pass since no swaps are made.
 <img src="https://cdn.discordapp.com/attachments/623253110285926443/929784320476971038/unknown.png" />
